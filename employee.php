@@ -162,7 +162,7 @@ table.login_tab1 {		background:rgba(255,255,255,0.9);
             <h2>&nbsp;&nbsp;View Courier Orders</h2>
             <div class="half left">
              <table>
-             <form action="viewce.php" method="post" style="background-color:#000000">
+             <form action="view_courier_order.php" method="post" style="background-color:#000000">
                      <tr>
                         <td width="355" colspan='2' bgcolor="#000000" class='login' align="center"><input type='submit' name='submit' value='Click here to view courier orders'>
                        </td>
@@ -191,7 +191,7 @@ table.login_tab1 {		background:rgba(255,255,255,0.9);
             <p>&nbsp;</p>
             <div class="clear h40"></div>
           <div class="half left">
-<table class="login_tab1"><form action="updatestatus.php" method="post">
+<table class="login_tab1"><form action="update_courier_status.php" method="post">
   <tr>
     <td colspan="2" class='login_nam' valign='middle'>Update Courier Status</td>
   </tr>
@@ -237,7 +237,7 @@ table.login_tab1 {		background:rgba(255,255,255,0.9);
 	
 	
 	<tr>
-	 <td class='login_table' align='left'><form action='changepasse.php' method='post'>
+	 <td class='login_table' align='left'><form action='changepwe.php' method='post'>
 	  <table class="login_tab">	
 	 <td class='login_table' align='left'>
 	 

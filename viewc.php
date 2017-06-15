@@ -105,12 +105,7 @@
     <script type="text/JavaScript" src="js/slimbox2.js"></script> 
 
     <style type="text/css">
-<!--
-.style1 {color: #000000}
-.style2 {
-	color: #000000
-}
--->
+
     </style>
     <script type="text/javascript">
 <!--

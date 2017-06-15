@@ -299,7 +299,7 @@ function validate()
 	
 	
 	<tr>
-	 <td class='login_table' align='left'><form action='changepass.php' method='post'>
+	 <td class='login_table' align='left'><form action='changepwc.php' method='post'>
 	  <table class="login_tab">	
 	 <td class='login_table' align='left'><form action='logging.php' method='post'>
 	 

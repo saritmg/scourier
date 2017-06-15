@@ -3,8 +3,8 @@
 <head>
 	<title>
 	Saaku Courier Management System 
-	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
-	<script type="text/javascript" src="engine1/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style/style.css" />
+	<script type="text/javascript" src="style/jquery.js"></script>
 </title>
 <style type="text/css">
 	body {

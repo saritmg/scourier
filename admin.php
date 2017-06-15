@@ -268,7 +268,7 @@ function validate()
 	
 	
 	<tr>
-	 <td class='login_table' align='left'><form action='changepassa.php' method='post'>
+	 <td class='login_table' align='left'><form action='changepwa.php' method='post'>
 	  <table class="login_tab">	
 	 <td class='login_table' align='left'>
 	 
