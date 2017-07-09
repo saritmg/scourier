@@ -154,6 +154,7 @@ table.login_tab1 {		background:rgba(255,255,255,0.9);
 	<li><a href="policy_details.php">POLICY DETAILS</a></li>
 	<li><a href="offer_details.php">OFFER DETAILS</a></li>
 	<li><a href="contact.php">CONTACT US</a></li>
+	<li><a href="UserManual.html">USER MANUAL</a></li>
 	</ul>
 	</div>
                 <h3> Who can use </h3>
