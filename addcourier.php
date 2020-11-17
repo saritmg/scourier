@@ -8,13 +8,13 @@
 <body>
 <?php
 
-$con=mysql_connect("localhost","root","");
+$con=mysqli_connect("localhost","root","");
 if(!$con)
 {
-die('could not connect'.mysql_error());
+die('could not connect'.mysqli_error());
 }
 
-mysql_select_db("courier",$con);
+mysqli_select_db("courier",$con);
 
 
 if($_POST['pay'])
@@ -25,7 +25,7 @@ else if(strcmp($_POST['mode'])) $mode=70;
 else $mode=50;
 $rate=$_POST['wt']*$_POST['num']*$mode;
 $query="INSERT INTO `courier_table`(orig,dest,sname,rname,radd,rate,mode) VALUES ('$_POST[orig]','$_POST[dest]','$_POST[sname]','$_POST[rname]','$_POST[raddress]',$rate,'$_POST[mode]')";
-$result=mysql_query($query,$con);
+$result=mysqli_query($query,$con);
 
 	if(!$result)
 	{	
@@ -35,8 +35,8 @@ $result=mysql_query($query,$con);
 	else {
 		echo " Courier Loaded !"."</br>";
 		$query="select * from courier_table order by cid desc limit 1 ";
-$result=mysql_query($query,$con);
-	$row=mysql_fetch_row($result);
+$result=mysqli_query($query,$con);
+	$row=mysqli_fetch_row($result);
 		echo "Courier ID for tracking purposes: ->> ".$row[0];
 		echo "</br>";
 		echo "Amount to be payed: ->> €:".$row[7];
@@ -44,7 +44,7 @@ $result=mysql_query($query,$con);
 	}
 
 }	
-	mysql_close($con);
+	mysqli_close($con);
 ?>
 
 </body>

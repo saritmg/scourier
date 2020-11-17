@@ -8,13 +8,13 @@
 <body>
 <?php
 
-$con=mysql_connect("localhost","root","");
+$con=mysqli_connect("localhost","root","");
 if(!$con)
 {
-die('could not connect'.mysql_error());
+die('could not connect'.mysqli_error());
 }
 
-mysql_select_db("courier",$con);
+mysqli_select_db("courier",$con);
 
 if(isset($_POST['rate']))
 		{
@@ -30,7 +30,7 @@ if(isset($_POST['rate']))
 			echo "Rate = " . $rate;
 			include 'addc.php';
 		
-			mysql_close($con);
+			mysqli_close($con);
 		}
 ?>
 

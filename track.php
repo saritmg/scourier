@@ -8,13 +8,13 @@
 <body>
 		<?php
         
-			$con=mysql_connect("localhost","root","");
+			$con=mysqli_connect("localhost","root","");
 			if(!$con)
 			{
-			die('could not connect'.mysql_error());
+			die('could not connect'.mysqli_error());
 			}
 			
-			mysql_select_db("courier",$con);
+			mysqli_select_db("courier",$con);
 			
 			
 			$un=$_POST['username'];
@@ -24,7 +24,7 @@
 			
 			
 			
-			$result=mysql_query($sql,$con);
+			$result=mysqli_query($sql,$con);
 			include("report3.php");
 			if(!$result)
 			{
@@ -35,7 +35,7 @@
 			
 			echo "<table>";
 			
-			while( $row=mysql_fetch_row($result))
+			while( $row=mysqli_fetch_row($result))
 			{
 				
 				echo "<tr><td>Courier ID= <p></p></td><td>$row[0]</td></tr><tr><td><p>Sender's Name=</p></td><td>$row[3]</td></tr><tr><td><p>Status=</p></td><td>$row[9]</td></tr>"; 

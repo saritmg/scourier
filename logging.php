@@ -13,15 +13,15 @@ if(isset($_POST['submit']))
 	$p=$_POST['password'];
 
 	include("connect.php");
-	$sql_connect=mysql_connect($host,$user,$pass) or die("cannot connect to database.please try after sometime");
-	mysql_select_db($db,$sql_connect) or die("cannot find database");
+	$sqli_connect=mysqli_connect($host,$user,$pass) or die("cannot connect to database.please try after sometime");
+	mysqli_select_db($db,$sqli_connect) or die("cannot find database");
 	
 	switch($_POST['type'])
 	{
 		case "client":
 					$select_user_query="SELECT * FROM `client` WHERE `username`='$u' AND `password`='$p'";
-					$select_user=mysql_query($select_user_query);
-					if(mysql_num_rows($select_user)==1)
+					$select_user=mysqli_query($select_user_query);
+					if(mysqli_num_rows($select_user)==1)
 					{
 						include 'client.php';
 						//session_start();
@@ -40,8 +40,8 @@ if(isset($_POST['submit']))
 					break;
 		case "admin":
 					$select_user_query="SELECT * FROM `admin` WHERE `username`='$u' AND `password`='$p'";
-					$select_user=mysql_query($select_user_query);
-					if(mysql_num_rows($select_user)==1)
+					$select_user=mysqli_query($select_user_query);
+					if(mysqli_num_rows($select_user)==1)
 					{
 						include 'admin.php';
 						//session_start();
@@ -59,8 +59,8 @@ if(isset($_POST['submit']))
 					break;
 		case "employee":
 					$select_user_query="SELECT * FROM `employee` WHERE `username`='$u' AND `password`='$p'";
-					$select_user=mysql_query($select_user_query);
-					if(mysql_num_rows($select_user)==1)
+					$select_user=mysqli_query($select_user_query);
+					if(mysqli_num_rows($select_user)==1)
 					
 					{
 						include 'employee.php';

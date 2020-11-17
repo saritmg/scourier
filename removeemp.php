@@ -10,19 +10,19 @@
 <body>
 <?php
         
-			$con=mysql_connect("localhost","root","");
+			$con=mysqli_connect("localhost","root","");
 			if(!$con)
 			{
-			die('could not connect'.mysql_error());
+			die('could not connect'.mysqli_error());
 			}
 			
-			mysql_select_db("courier",$con);
+			mysqli_select_db("courier",$con);
 			
 			
 			$emp=$_POST['emp'];			
 			$sql="DELETE FROM `courier`.`employee` WHERE `employee`.`username`='$emp'";	
 			
-			$result=mysql_query($sql,$con);
+			$result=mysqli_query($sql,$con);
 			
 			if(!$result)
 			{

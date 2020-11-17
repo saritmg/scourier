@@ -8,13 +8,13 @@
 <body>
 <?php
 
-$con=mysql_connect("localhost","root","");
+$con=mysqli_connect("localhost","root","");
 if(!$con)
 {
-die('could not connect'.mysql_error());
+die('could not connect'.mysqli_error());
 }
 
-mysql_select_db("courier",$con);
+mysqli_select_db("courier",$con);
 
 
 
@@ -23,7 +23,7 @@ $sql="SELECT * FROM `sender_table`";//(cid,orig,dest,sname,rname,radd,date,rate,
 
 
 
-$result=mysql_query($sql,$con);
+$result=mysqli_query($sql,$con);
 
 if(!$result)
 {
@@ -32,14 +32,14 @@ include 'addc.php';
 }
 else {
 
-$row= mysql_fetch_row($result);
+$row= mysqli_fetch_row($result);
 if(strcmp($row[6],air)) $mode=100;
 else if(strcmp($row[6],surface)) $mode=70;
 else $mode=50;
 $rate=$row[7]*$row[8]*$mode;
 
 $sql="INSERT INTO `courier_table`(orig,dest,sname,rname,radd,date,rate,mode) VALUES ('$row[1]','$row[4]','$row[0]','$row[3]','$row[5]','$row[9]',$rate,'$row[6]')";
-$result=mysql_query($sql,$con);
+$result=mysqli_query($sql,$con);
 
 }
 ?>
